@@ -1,0 +1,15 @@
+{
+  "name": "tasky",
+  "version": "0.0.0",
+  "description": "a command line task app",
+  "main": "index.js",
+  "preferGlobal" : true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "tasky": "index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
