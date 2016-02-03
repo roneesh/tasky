@@ -19,6 +19,15 @@ switch(user_command) {
 	case 'list':
 		commands.list();
 		break;
+	case 'show':
+		commands.show(user_arguments);
+		break;
+	case 'complete':
+		commands.complete(user_arguments);
+		break;
+	case 'help':
+		commands.help();
+		break;
 	case 'test-getIndex':
 		tests.getIndex();
 		break;
