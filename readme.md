@@ -20,3 +20,6 @@
 ### Development guidelines
 - variable names in snake_case
 - function names in camelCase
+- the api.js file is a core file that manages reading and writing the .json files
+- commands.js are the functions called from the command line, these functions should loosely wrap the functionality of api.js functions, and provide things like context and printing of tasks. 
+- if you're adding a feature, first write the proper function in api.js that will manipulate/fetch/delete the task you want, then write a wrapper function in commands.js that will let the user initiate the command, and provide logging so they know if the task was done
