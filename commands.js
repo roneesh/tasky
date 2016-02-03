@@ -59,7 +59,10 @@ commands.show = function(filter) {
 			printTasks(api.getTasksByStatus(true))
 		} else if (filter[0] == 'incomplete') {
 			printTasks(api.getTasksByStatus(false));
-		} else {
+		} else if (filter[0] == undefined) {
+			printTasks(api.getTasks());
+		}
+		else {
 			console.log("can't display tasks that by " + filter[0] + " status");
 		}
 	}
