@@ -10,7 +10,11 @@ api.db_file = '.tasky.json';
 
 
 api.getIndex = function() {
-	return JSON.parse(fs.readFileSync(this.config_file, "utf8")).index;
+	try {
+		return JSON.parse(fs.readFileSync(this.config_file, "utf8")).index;
+	} catch(e) {
+		throw new Error("There is no .tasky_config.json file in this directory, try running 'tasky init' first!");
+	}
 }
 
 api.incrementIndex = function() {
@@ -20,7 +24,11 @@ api.incrementIndex = function() {
 }
 
 api.getTasks = function() {
-	return JSON.parse(fs.readFileSync(api.db_file, 'utf-8')).tasks;
+	try {
+		return JSON.parse(fs.readFileSync(this.db_file, 'utf-8')).tasks;
+	} catch(e) {
+		throw new Error("There is no .tasky.json file in this directory, try running 'tasky init' first!");
+	}
 }
 
 api.getTask = function(id) {
