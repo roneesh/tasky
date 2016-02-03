@@ -9,6 +9,7 @@ commands.init = function() {
 		index: 0
 	}));
 	fs.writeFileSync(api.db_file, JSON.stringify({tasks: []}));
+	console.log('tasky init ran successfully...\n','.tasky.json created\n','.tasky_config.json created!\n');
 };
 commands.add = function(user_arguments) {
 	var new_task = {
