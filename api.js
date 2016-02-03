@@ -6,7 +6,7 @@ var fs = require('fs'),
 var api = {};
 
 api.config_file = '.tasky_config.json';
-api.db_file = 'tasky.json';
+api.db_file = '.tasky.json';
 
 
 api.getIndex = function() {
