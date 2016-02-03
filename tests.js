@@ -1,4 +1,4 @@
-// Required files
+// Requires
 var fs = require('fs'),
 	api = require('./api');
 

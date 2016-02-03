@@ -14,7 +14,7 @@ switch(user_command) {
 		commands.init();
 		break;
 	case 'add':
-		commands.add();
+		commands.add(user_arguments);
 		break;
 	case 'list':
 		commands.list();
