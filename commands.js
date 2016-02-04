@@ -21,7 +21,7 @@ commands.add = function(user_arguments) {
 	tasks.push(new_task);
 	api.writeTasks(tasks);
 	api.incrementIndex();
-	this.list();
+	this.show('');
 };
 commands.complete = function(id) {
 	var tasks = api.getTasks(),
@@ -34,7 +34,7 @@ commands.complete = function(id) {
 			}
 		});
 		api.writeTasks(tasks);
-		this.list();
+		this.show('');
 	} else {
 		console.log('could not find task with id of: ', id);
 	}

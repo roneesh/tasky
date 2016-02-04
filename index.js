@@ -32,5 +32,5 @@ switch(user_command) {
 		tests.incrementIndex();
 		break;
 	default:
-		commands.list();
+		commands.show('');
 }
