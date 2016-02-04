@@ -24,7 +24,7 @@
 - commands.js are the functions called from the command line, these functions should loosely wrap the functionality of api.js functions, and provide things like context and printing of tasks. 
 - if you're adding a feature, first write the proper function in api.js that will manipulate/fetch/delete the task you want, then write a wrapper function in commands.js that will let the user initiate the command, and provide logging so they know if the task was done
 
-### Todo's
+### Todos
 - tasky doesn't delete tasks right now, I think that's a perfect thing to implement on a pairing session :-)
 - tasky should also update task descriptions, but this might be a pretty involved fix, since it would alter how we accept user arguments
 - On that note, overhall user arguments to accept things like flags and make it more like other CLI tools
