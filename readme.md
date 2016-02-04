@@ -26,6 +26,7 @@
 
 ### Todos
 - tasky doesn't delete tasks right now, I think that's a perfect thing to implement on a pairing session :-)
+- testing should move to Jasmine and not mutate the state of the task list, this could also be a good one to implement in pairing
 - tasky should also update task descriptions, but this might be a pretty involved fix, since it would alter how we accept user arguments
 - On that note, overhall user arguments to accept things like flags and make it more like other CLI tools
 - add tags to tasks, so they can have tags like 'development', or 'personal', that way you could run "tasky show -tag=personal" to a see a list of all tasks tagged 'personal'
