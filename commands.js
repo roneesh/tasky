@@ -70,7 +70,8 @@ commands.help = function() {
 		' Tasky is a command line app to create tasks for a folder quickly\n',
 		'Available commands:\n',
 		'\t \'tasky init\' --- creates .tasky_config.json and tasky.json, required before other tasks can run\n',
-		'\t \'tasky list\' --- lists all tasks\n',
+		'\t \'tasky show\' --- lists all tasks\n',
+		'\t \'tasky show /id/complete/incomplete\' --- lists all complete/incomplete tasks or single task if id is given\n',
 		'\t \'tasky add \'task description \' --- adds a task, quotes not required\n',
 		'\t \'tasky complete \'numerical id of task \' --- toggles the completetion status of a task\n',
 		''
