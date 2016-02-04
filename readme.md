@@ -15,6 +15,7 @@
 - 'tasky add first task' -> will create a task with a description of 'first task'
 - 'tasky show complete' -> will list all completed tasks
 - 'tasky show incomplete' -> will list all incomplete tasks
+- 'tasky complete 1' -> will toggle completed status of task with id of 1, change out 1 for whatever id you want to toggle status of. 
 
 ### Development guidelines
 - variable names in snake_case
