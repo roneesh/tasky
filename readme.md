@@ -15,7 +15,6 @@
 - 'tasky add first task' -> will create a task with a description of 'first task'
 - 'tasky show complete' -> will list all completed tasks
 - 'tasky show incomplete' -> will list all incomplete tasks
-- 'tasky list' -> lists all tasks
 
 ### Development guidelines
 - variable names in snake_case
