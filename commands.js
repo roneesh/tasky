@@ -23,10 +23,6 @@ commands.add = function(user_arguments) {
 	api.incrementIndex();
 	this.list();
 };
-commands.list = function() {
-	var tasks = api.getTasks();
-	printTasks(tasks);
-};
 commands.complete = function(id) {
 	var tasks = api.getTasks(),
 		id = JSON.parse(id);
