@@ -31,6 +31,9 @@ switch(user_command) {
 	case 'test-incrementIndex':
 		tests.incrementIndex();
 		break;
+	case 'test-addTask':
+		tests.addTask();
+		break;
 	default:
 		commands.show('');
 }
