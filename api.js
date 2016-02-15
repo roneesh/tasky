@@ -53,14 +53,13 @@ api.deleteTask = function(id) {
 }
 
 api.getTasksByStatus = function(status) {
-	var tasks = this.getTasks(),
-		tasksByStatus = [];
-	tasks.forEach(function(task) {
-		if (task.completed === status) {
-			tasksByStatus.push(task);
-		}
+	var tasks = this.getTasks();
+
+	tasks = tasks.filter(function(task) {
+		return task.completed === status;
 	});
-	return tasksByStatus;
+	
+	return tasks;
 }
 
 api.hasTask = function(id) {
