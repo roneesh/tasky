@@ -42,6 +42,22 @@ api.getTask = function(id) {
 	return [single_task]; //returns an array to match getTasks, which also returns an array
 }
 
+api.deleteTask = function(id) {
+	var tasks = this.getTasks(),
+		index_to_delete;
+
+	tasks.forEach(function(task, index) {
+		if (task.index === id) {
+			index_to_delete = index;
+		}
+	});
+	tasks[index_to_delete] = null;
+	tasks = tasks.filter(function(task) {
+		return task !== null;
+	});
+	api.writeTasks(tasks);
+}
+
 api.getTasksByStatus = function(status) {
 	var tasks = this.getTasks(),
 		tasksByStatus = [];

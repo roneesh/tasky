@@ -16,6 +16,9 @@ switch(user_command) {
 	case 'add':
 		commands.add(user_arguments);
 		break;
+	case 'delete':
+		commands.deleteTask(user_arguments);
+		break;
 	case 'show':
 		commands.show(user_arguments);
 		break;

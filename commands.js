@@ -23,6 +23,20 @@ commands.add = function(user_arguments) {
 	api.incrementIndex();
 	this.show('');
 };
+commands.deleteTask = function(task) {
+	var task;
+
+	if (task[0] == parseInt(task[0],10) ) {
+		if (api.hasTask(parseInt(task[0],10))) {
+			task = api.getTask(parseInt(task[0],10));
+			console.log('task from api.getTask', task[0].index)
+			api.deleteTask(task[0].index);
+			printTasks(api.getTasks());
+		} else {
+			console.log('could not find task with id of: ', task[0]);
+		}
+	}
+};
 commands.complete = function(id) {
 	var tasks = api.getTasks(),
 		id = JSON.parse(id);
