@@ -51,9 +51,9 @@ api.deleteTask = function(id) {
 			index_to_delete = index;
 		}
 	});
-	tasks[index_to_delete] = null;
+	delete tasks[index_to_delete];
 	tasks = tasks.filter(function(task) {
-		return task !== null;
+		return task;
 	});
 	api.writeTasks(tasks);
 }
