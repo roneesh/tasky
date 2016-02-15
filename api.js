@@ -43,18 +43,12 @@ api.getTask = function(id) {
 }
 
 api.deleteTask = function(id) {
-	var tasks = this.getTasks(),
-		index_to_delete;
+	var tasks = this.getTasks();
 
-	tasks.forEach(function(task, index) {
-		if (task.index === id) {
-			index_to_delete = index;
-		}
-	});
-	delete tasks[index_to_delete];
 	tasks = tasks.filter(function(task) {
-		return task;
+		return task.index !== id
 	});
+	
 	api.writeTasks(tasks);
 }
 
